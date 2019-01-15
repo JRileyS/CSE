@@ -1,3 +1,7 @@
+import string
+print (list(string.ascii_letters))
+print (string.digits)
+print (string.punctuation)
 print("Hello World!")
 # What do I put here? Blah blah blah lorem ipsum dolor
 cars = 5
