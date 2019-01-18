@@ -31,6 +31,7 @@ while guesses > 0 and "_" in disp_list:
     else:
         print("Whoops. Ahaha!")
         guesses -= 1
+        guess = "_"
 
 # Debugging code, comment out after completion
 # print (guess_word)
