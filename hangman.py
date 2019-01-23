@@ -12,31 +12,33 @@ swords = ["Adventure", "Alone", "Amazing", "Awesome", "Bed", "Beauty", "Bliss", 
           "Sing", "Smile", "Sparkle", "Special", "Sunny", "Sunset", "Sweet", "Tears", "Together", "Tragedy", "Treasure",
           "Unrequited", "Vacation", "Warm", "Wonderful"]
 
-full_list = [swords]
+full_list = []
 ascii_letter_list = string.ascii_letters
 guesses = 7
-guess_word = random.choice(full_list)
-hint = "{0} would like this word the most."
+guess_word = random.choice(swords)
+word_person = "Sayori"
+hint = [str(word_person) + " would like this word the most."]
 disp_list = list("_" * len(guess_word))
 letter_list = list(guess_word)
 print(disp_list)
 output = []
-guess = input("Which letter will you guess?")
+
 while guesses > 0 and "_" in disp_list:
+    guess = input("Which letter will you guess?")
     for i in range(len(guess_word)):
         if guess_word[i] in guess:
             print("Nice work!")
-            output.append(letter_list[i])
+            # output.append(letter_list[i])
             output = guess
             print(output)
             guess = "_"
         else:
             print("Whoops. Ahaha!")
-            output.append(disp_list[i])
+            # output.append(disp_list[i])
             guesses -= 1
 
 # Debugging code, comment out after completion
-print (guess_word)
-print (ascii_letter_list)
-print (disp_list)
-print (letter_list)
+print(guess_word)
+print(ascii_letter_list)
+print(disp_list)
+print(letter_list)
