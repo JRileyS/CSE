@@ -11,6 +11,7 @@ swords = ["Adventure", "Alone", "Amazing", "Awesome", "Bed", "Beauty", "Bliss", 
           "Precious", "Promise", "Rainbow", "Raincloud", "Romance", "Rose", "Sadness", "Scars", "Shame", "Silly",
           "Sing", "Smile", "Sparkle", "Special", "Sunny", "Sunset", "Sweet", "Tears", "Together", "Tragedy", "Treasure",
           "Unrequited", "Vacation", "Warm", "Wonderful"]
+test = ["TTTT"]
 
 full_list = []
 ascii_letter_list = string.ascii_letters
@@ -20,22 +21,19 @@ word_person = "Sayori"
 hint = [str(word_person) + " would like this word the most."]
 disp_list = list("_" * len(guess_word))
 letter_list = list(guess_word)
+print(hint)
 print(disp_list)
 output = []
 
 while guesses > 0 and "_" in disp_list:
     guess = input("Which letter will you guess?")
-    for i in range(len(guess_word)):
-        if guess_word[i] in guess:
+    for character in guess_word:
+        if character == "e":
+            # replace with a _
             print("Nice work!")
-            # output.append(letter_list[i])
-            output = guess
-            print(output)
-            guess = "_"
-        else:
-            print("Whoops. Ahaha!")
-            # output.append(disp_list[i])
-            guesses -= 1
+            currrent_index = letter_list.index(character)
+            disp_list.pop(currrent_index)
+            disp_list.insert(currrent_index, "e")
 
 # Debugging code, comment out after completion
 print(guess_word)
