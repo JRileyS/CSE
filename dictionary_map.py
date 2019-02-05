@@ -1,4 +1,4 @@
-######Jacob's Experiment######
+######An Experiment######
 world_map = {
     'START_ROOM': {
         'NAME': "Starting Room",
