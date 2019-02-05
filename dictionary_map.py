@@ -52,8 +52,6 @@ world_map = {
     }
 }
 
-
-
 # Controller
 playing = True
 current_node = world_map['START_ROOM']
