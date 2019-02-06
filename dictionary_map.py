@@ -19,6 +19,7 @@ world_map = {
         'PATHS': {
             'EAST': 'EAST_DOG',
             'NORTH': 'ARMORY',
+            'SOUTH': 'SE_PATH',
             'WEST': 'START_ROOM'
         }
     },
@@ -28,7 +29,8 @@ world_map = {
                        "a path to the east back to your starting point.",
         'PATHS': {
             'WEST': 'WEST_DOG',
-            'EAST': 'START_ROOM'
+            'EAST': 'START_ROOM',
+            'SOUTH': 'SW_PATH'
         }
     },
     'NORTH_PATH': {
@@ -39,7 +41,8 @@ world_map = {
         'PATHS': {
             'NORTH': 'NORTH_DOG',
             'SOUTH': 'START_ROOM',
-            'EAST': 'ARMORY'
+            'EAST': 'ARMORY',
+            'WEST': 'NW_PATH'
         }
     },
     'SOUTH_PATH': {
@@ -49,7 +52,9 @@ world_map = {
                        "starting point.",
         'PATHS': {
             'NORTH': 'START_ROOM',
-            'SOUTH': 'SOUTH_DOG'
+            'SOUTH': 'SOUTH_DOG',
+            'EAST': 'SE_PATH',
+            'WEST': 'SW_PATH'
         }
     },
     'EAST_DOG': {
@@ -103,30 +108,30 @@ world_map = {
         'NAME': "Armory",
         'DESCRIPTION': "You find some abandoned armor here. Maybe "
                        "another person came here before you? "
-                       "There's also a path south and a path west.",
+                       "There's also a path north and a path east.",
         'PATHS': {
-            'WEST': 'NORTH_PATH',
-            'SOUTH': 'EAST_PATH'
+            'NORTH': 'WEST_PATH',
+            'EAST': 'SOUTH_PATH'
         }
     },
     'SE_PATH': {
         'NAME': "Armory",
         'DESCRIPTION': "You find some abandoned armor here. Maybe "
                        "another person came here before you? "
-                       "There's also a path south and a path west.",
+                       "There's also a path north and a path west.",
         'PATHS': {
-            'WEST': 'NORTH_PATH',
-            'SOUTH': 'EAST_PATH'
+            'WEST': 'SOUTH_PATH',
+            'NORTH': 'EAST_PATH'
         }
     },
     'NW_PATH': {
         'NAME': "Armory",
         'DESCRIPTION': "You find some abandoned armor here. Maybe "
                        "another person came here before you? "
-                       "There's also a path south and a path west.",
+                       "There's also a path south and a path east.",
         'PATHS': {
-            'WEST': 'NORTH_PATH',
-            'SOUTH': 'EAST_PATH'
+            'EAST': 'NORTH_PATH',
+            'SOUTH': 'WEST_PATH'
         }
     }
 
