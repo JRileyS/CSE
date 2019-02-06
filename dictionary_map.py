@@ -1,4 +1,4 @@
-######An Experiment######
+# # # An Experiment # # #
 world_map = {
     'START_ROOM': {
         'NAME': "Starting Room",
@@ -6,14 +6,14 @@ world_map = {
                        "middle of an island. How'd you get here? "
                        "There's paths to each cardinal direction.",
         'PATHS': {
-            'EAST': "EAST_START",
-            'WEST': "WEST_START",
-            'NORTH': "NORTH_START",
-            'SOUTH': "SOUTH_START"
+            'EAST': "EAST_PATH",
+            'WEST': "WEST_PATH",
+            'NORTH': "NORTH_PATH",
+            'SOUTH': "SOUTH_PATH"
         }
     },
-    'EAST_START': {
-        'NAME': "Eastern Start",
+    'EAST_PATH': {
+        'NAME': "Eastern Path",
         'DESCRIPTION': "You can see paths to the east and north, "
                        "along with a path west, back to where you started.",
         'PATHS': {
@@ -22,13 +22,34 @@ world_map = {
             'WEST': 'START_ROOM'
         }
     },
-    'WEST_START': {
-        'NAME': "Western Start",
+    'WEST_PATH': {
+        'NAME': "Western Path",
         'DESCRIPTION': "You can see a path to your west, along with "
                        "a path to the east back to your starting point.",
         'PATHS': {
             'WEST': 'WEST_DOG',
             'EAST': 'START_ROOM'
+        }
+    },
+    'NORTH_PATH': {
+        'NAME': "Northern Path",
+        'DESCRIPTION': "There's a path to your north, a path "
+                       "to your east, and a path back to your "
+                       "starting point, to the south.",
+        'PATHS': {
+            'NORTH': 'NORTH_DOG',
+            'SOUTH': 'START_ROOM',
+            'EAST': 'ARMORY'
+        }
+    },
+    'SOUTH_PATH': {
+        'NAME': "Southern Path",
+        'DESCRIPTION': "You find only two paths to go: one to the "
+                       "south, and one to the north, back to your "
+                       "starting point.",
+        'PATHS': {
+            'NORTH': 'START_ROOM',
+            'SOUTH': 'SOUTH_DOG'
         }
     },
     'EAST_DOG': {
@@ -37,7 +58,35 @@ world_map = {
                        "game. Maybe you should leave it be. "
                        "Or, maybe you can befriend it?",
         'PATHS': {
-            'WEST': 'EAST_START'
+            'WEST': 'EAST_PATH'
+        }
+    },
+    'WEST_DOG': {
+        'NAME': "Western Dog Room",
+        'DESCRIPTION': "You see a pair of dogs; one has a scarf, "
+                       "the other a pilot's cap. You don't know "
+                       "why these dogs have clothes on... but "
+                       "you could befriend them if you tried.",
+        'PATHS': {
+            'EAST': 'WEST_PATH'
+        }
+    },
+    'NORTH_DOG': {
+        'NAME': "Northern Dog Room",
+        'DESCRIPTION': "You see a pomeranian here, just sitting "
+                       "down and drawing a picture. Maybe, just "
+                       "maybe, you can befriend it...?",
+        'PATHS': {
+            'SOUTH': 'NORTH_PATH'
+        }
+    },
+    'SOUTH_DOG': {
+        'NAME': "Southern Dog Room",
+        'DESCRIPTION': "You see a small dog jumping up and "
+                       "down. It seems to be making an animation. "
+                       "Maybe you can befriend it...?",
+        'PATHS': {
+            'NORTH': 'SOUTH_PATH'
         }
     },
     'ARMORY': {
@@ -46,10 +95,41 @@ world_map = {
                        "another person came here before you? "
                        "There's also a path south and a path west.",
         'PATHS': {
-            'WEST': 'NORTH_START',
-            'SOUTH': 'EAST_START'
+            'WEST': 'NORTH_PATH',
+            'SOUTH': 'EAST_PATH'
+        }
+    },
+    'SW_PATH': {
+        'NAME': "Armory",
+        'DESCRIPTION': "You find some abandoned armor here. Maybe "
+                       "another person came here before you? "
+                       "There's also a path south and a path west.",
+        'PATHS': {
+            'WEST': 'NORTH_PATH',
+            'SOUTH': 'EAST_PATH'
+        }
+    },
+    'SE_PATH': {
+        'NAME': "Armory",
+        'DESCRIPTION': "You find some abandoned armor here. Maybe "
+                       "another person came here before you? "
+                       "There's also a path south and a path west.",
+        'PATHS': {
+            'WEST': 'NORTH_PATH',
+            'SOUTH': 'EAST_PATH'
+        }
+    },
+    'NW_PATH': {
+        'NAME': "Armory",
+        'DESCRIPTION': "You find some abandoned armor here. Maybe "
+                       "another person came here before you? "
+                       "There's also a path south and a path west.",
+        'PATHS': {
+            'WEST': 'NORTH_PATH',
+            'SOUTH': 'EAST_PATH'
         }
     }
+
 }
 
 # Controller
