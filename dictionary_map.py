@@ -63,7 +63,8 @@ world_map = {
                        "game. Maybe you should leave it be. "
                        "Or, maybe you can befriend it?",
         'PATHS': {
-            'WEST': 'EAST_PATH'
+            'WEST': 'EAST_PATH',
+            'EAST': 'EEE_PATH'
         }
     },
     'WEST_DOG': {
@@ -80,9 +81,11 @@ world_map = {
         'NAME': "Northern Dog Room",
         'DESCRIPTION': "You see a pomeranian here, just sitting "
                        "down and drawing a picture. Maybe, just "
-                       "maybe, you can befriend it...?",
+                       "maybe, you can befriend it...? "
+                       "There's also a path north and a path south.",
         'PATHS': {
-            'SOUTH': 'NORTH_PATH'
+            'SOUTH': 'NORTH_PATH',
+            'NORTH': 'NNN_PATH'
         }
     },
     'SOUTH_DOG': {
@@ -96,8 +99,9 @@ world_map = {
     },
     'ARMORY': {
         'NAME': "Armory",
-        'DESCRIPTION': "You find some abandoned armor here. Maybe "
+        'DESCRIPTION': "You find some abandoned armor and a steak here. Maybe "
                        "another person came here before you? "
+                       "The steak seems to be infinitely usable to befriend dogs. "
                        "There's also a path south and a path west.",
         'PATHS': {
             'WEST': 'NORTH_PATH',
@@ -133,6 +137,29 @@ world_map = {
             'EAST': 'NORTH_PATH',
             'SOUTH': 'WEST_PATH'
         }
+    },
+    'NNN_PATH': {
+        'NAME': "Far North Path",
+        'DESCRIPTION': "There's a broken-down boat here. If you "
+                       "could fix it, you might be able to escape "
+                       "this island.",
+        'PATHS': {
+            'SOUTH': 'NORTH_DOG',
+            'NORTH': 'WIN'
+        }
+    },
+    'EEE_PATH': {
+        'NAME': "Far Eastern Path",
+        'DESCRIPTION': "You're at the most far east point at the island. "
+                       "There's some wood you could use to build something.",
+        'PATHS': {
+            'WEST': 'EAST_DOG'
+        }
+    },
+    'WIN': {
+        'NAME': "You've won the game!",
+        'DESCRIPTION': "You've escaped the island and survived the dogs. "
+                       "You can type \'restart\' to restart the game.",
     }
 
 }
@@ -148,6 +175,8 @@ while playing:
     command = input("> ")
     if command.lower() in ['q', 'quit', 'exit']:
         playing = False
+    elif command.lower() in ['restart']:
+        current_node = world_map['START_ROOM']
     elif command.upper() in directions:
         try:
             room_name = current_node['PATHS'][command.upper()]
