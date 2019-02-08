@@ -183,5 +183,7 @@ while playing:
             current_node = world_map[room_name]
         except KeyError:
             print("You can't go that way.")
+    elif command.lower() in ['zork']:
+        print("Wrong game.")
     else:
         print("I don't know that command.")
