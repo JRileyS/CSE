@@ -1,4 +1,5 @@
 import string
+import random
 print (list(string.ascii_letters))
 print (string.digits)
 print (string.punctuation)
@@ -21,3 +22,4 @@ colors.pop(0)
 print(colors)
 print(colors[2])
 print(len(colors))
+
