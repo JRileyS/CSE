@@ -1,6 +1,5 @@
 import Special_Random
 
-
 class Phone(object):
     def __init__(self, carrier, charge_left=50):
         # These are attributes that the object has.
@@ -40,6 +39,7 @@ class Phone(object):
         print("The phone's screen broke.")
         self.screen = False
 
+
 my_phone = Phone("ATT", 100)
 your_phone = Phone("Bell", 0)
 default_phone = Phone("Verizon")
@@ -52,3 +52,42 @@ your_phone.smash_phone()
 your_phone.make_call(1)
 
 print(Special_Random.RandomWiebe.myrandom())
+
+
+class Steak(object):
+    def __init__(self, freshness, number, exists):
+        self.exists = True
+        self.freshness = freshness
+        self.number = number
+
+    def freshen(self, freshness):
+        freshness += 1
+        if freshness > 10:
+            freshness = 10
+
+    def feed(self, Dog.happy):
+        number -= 1
+        Dog.happy = True
+        if Dog.angry = True:
+            Dog.angry = False
+
+class Dog(object):
+    def __init__(self):
+        self.angry = True
+        self.happy = False
+
+    def bite(self):
+        if self.happy == True:
+            print("The dog did not bite you. You're glad it doesn't.")
+        elif self.angry == True:
+            print("The dog bit you angrily! Ouch! That seemed like a critical hit.")
+        else:
+            print("The dog nipped on you! You're glad the dog didn't use its full power.")
+
+    def feed(self, number):
+        if Steak.exists = True:
+            number -= 1
+            if self.angry = True:
+                self.angry = False
+            self.happy = True
+            print("The dog became happy!")

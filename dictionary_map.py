@@ -1,4 +1,5 @@
 # # # An Experiment # # #
+import Object_Notes
 world_map = {
     'START_ROOM': {
         'NAME': "Starting Room",
