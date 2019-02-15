@@ -65,29 +65,39 @@ class Steak(object):
         if freshness > 10:
             freshness = 10
 
-    def feed(self, Dog.happy):
-        number -= 1
+    def feed(self):
+        self.number -= 1
         Dog.happy = True
-        if Dog.angry = True:
+        if Dog.angry:
             Dog.angry = False
+
 
 class Dog(object):
     def __init__(self):
         self.angry = True
         self.happy = False
+        self.breed = "pomeranian"
+        self.size = "big"
+        self.color = "white"
 
     def bite(self):
-        if self.happy == True:
+        self.angry = False
+        self.happy = True
+        if self.happy:
             print("The dog did not bite you. You're glad it doesn't.")
-        elif self.angry == True:
+        elif self.angry:
             print("The dog bit you angrily! Ouch! That seemed like a critical hit.")
         else:
             print("The dog nipped on you! You're glad the dog didn't use its full power.")
 
     def feed(self, number):
-        if Steak.exists = True:
+        if exists:
             number -= 1
-            if self.angry = True:
+            if self.angry:
                 self.angry = False
             self.happy = True
             print("The dog became happy!")
+        else:
+            print("You don't have anything to feed the dog.")
+
+print(Dog.bite(Dog))
