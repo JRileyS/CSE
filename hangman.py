@@ -1,48 +1,88 @@
 import random
-import string
-import wave
-swords = ["Adventure", "Alone", "Amazing", "Awesome", "Bed", "Beauty", "Bliss", "Broken", "Calm", "Charm", "Cheer",
-          "Childhood", "Clumsy", "Color", "Comfort", "Cry", "Dance", "Dark", "Daydream", "Dazzle", "Death", "Defeat",
-          "Depression", "Embrace", "Empty", "Excitement", "Extraordinary", "Family", "Fear", "Feather", "Fireflies",
-          "Fireworks", "Flower", "Flying", "Forgive", "Friends", "Fun", "Grief", "Happiness", "Heart", "Holiday",
-          "Hope", "Hopeless", "Hurt", "Joy", "Laugh", "Lazy", "Loud", "Love", "Lucky", "Marriage", "Memories", "Misery",
-          "Misfortune", "Music", "Nature", "Ocean", "Passion", "Peaceful", "Pain", "Party", "Play", "Prayer",
-          "Precious", "Promise", "Rainbow", "Raincloud", "Romance", "Rose", "Sadness", "Scars", "Shame", "Silly",
-          "Sing", "Smile", "Sparkle", "Special", "Sunny", "Sunset", "Sweet", "Tears", "Together", "Tragedy", "Treasure",
-          "Unrequited", "Vacation", "Warm", "Wonderful"]
-test = ["EEEE"]
-
+words = ["Apple", "Banana", "Crayon", "Depth", "Earthbound", "Fire", "Gasp", "Horse", "Impossible", "Joke", "Keep",
+         "Lemon", "Mother", "Nobody", "Ocean", "Pleasing", "Quick", "Repeat", "Stay", "Test", "Under", "Violet",
+         "Weather", "Xylophone", "You", "Zebra"]
 full_list = []
-ascii_letter_list = string.ascii_letters
-guesses = 7
-guess_word = str.lower(random.choice(test))
-word_person = "Sayori"
-hint = [str(word_person) + " would like this word the most."]
-disp_list = list("_" * len(guess_word))
-letter_list = list(guess_word)
-print(hint)
-print(disp_list)
-output = []
+guesses_left = 7
+guess_word = random.choice(words).lower()
+player_input = None
+guessed_letters = []
+word_guessed = []
+for char in guess_word:
+    word_guessed.append("_")
 
-while guesses > 0 and "_" in disp_list:
-    guess = input("Which letter will you guess?")
-    for character in str.lower(guess_word):
-        if character == "e":
-            # replace with a _
-            print("Nice work!")
-            currrent_index = letter_list.index(character)
-            disp_list.pop(currrent_index)
-            disp_list.insert(currrent_index, "e")
+while guesses_left > 1 and "_" in word_guessed:
+    print("You have " + str(guesses_left) + " guesses left.")
+    join_guess = "".join(word_guessed)
+    print(join_guess)
+
+    try:
+        player_input = str(input("Please input a letter from A to Z.")).lower()
+    except:
+        print("That isn't a valid input. Try again?")
+        continue
+    else:
+        if not player_input.isalpha():  # Check if the guess is not a letter
+            print("That isn't a letter. Try again?")
+            continue
+        elif len(player_input) > 1:  # Check if the guess is more than one letter
+            print("That's more than one letter. Try again?")
+            continue
+        elif player_input in guessed_letters:  # Check if the letter's already guessed
+            print("You've already guessed that letter. I won't take any points off, but don't do that.")
+            continue
         else:
-            # Whoops + remove guess
-            print("Whoops. Ahaha...")
-            guesses -= 1
+            pass
+    guessed_letters.append(player_input)
 
-if guesses = 0:
-    print("An exception has occurred. Please restart the system.")
-    wave.open(C:/Users/cc5c/Downloads/glitch.wav)
-# Debugging code, comment out after completion
-print(guess_word)
-print(ascii_letter_list)
-print(disp_list)
-print(letter_list)
+    for char in range(len(guess_word)):
+        if player_input == guess_word[char]:  # If your guessed letter matches a letter in the word
+            word_guessed[char] = player_input  # Replace all the letters that match with your guessed letter
+    if player_input not in guess_word:
+        guesses_left -= 1
+        print("Whoops! That wasn't in the word.")
+
+    if "_" not in word_guessed:
+        print("Congrats! " + str(guess_word) + " was the word.")
+    elif guesses_left == 0:
+        print("Looks like you're out of guesses. " + str(guess_word) + " was the word.")
+    else:
+        pass
+
+while guesses_left == 1 and "_" in word_guessed:
+    print("Only 1 guess left! Choose carefully!")
+    join_guess = "".join(word_guessed)
+    print(join_guess)
+
+    try:
+        player_input = str(input("Please input a letter from A to Z.")).lower()
+    except:
+        print("That isn't a valid input. Try again?")
+        continue
+    else:
+        if not player_input.isalpha():  # Check if the guess is not a letter
+            print("That isn't a letter. Try again?")
+            continue
+        elif len(player_input) > 1:  # Check if the guess is more than one letter
+            print("That's more than one letter. Try again?")
+            continue
+        elif player_input in guessed_letters:  # Check if the letter's already guessed
+            print("You've already guessed that letter. I won't take any points off, but don't do that.")
+            continue
+        else:
+            pass
+    guessed_letters.append(player_input)
+
+    for char in range(len(guess_word)):
+        if player_input == guess_word[char]:  # If your guessed letter matches a letter in the word
+            word_guessed[char] = player_input  # Replace all the letters that match with your guessed letter
+    if player_input not in guess_word:
+        guesses_left -= 1
+        print("Whoops! That wasn't in the word.")
+
+    if "_" not in word_guessed:
+        print("Congrats! " + str(guess_word) + " was the word.")
+    elif guesses_left == 0:
+        print("Looks like you're out of guesses. " + str(guess_word) + " was the word.")
+    else:
+        pass

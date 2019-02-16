@@ -26,56 +26,57 @@
           <entry key="project.open.time.56" value="1" />
           <entry key="project.open.time.61" value="1" />
           <entry key="project.open.time.75" value="1" />
-          <entry key="project.opened" value="9" />
+          <entry key="project.open.time.8" value="1" />
+          <entry key="project.opened" value="10" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="py" value="6" />
+          <entry key="py" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Python" value="6" />
+          <entry key="Python" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="5644" />
+          <entry key="py" value="8391" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="5644" />
+          <entry key="Python" value="8391" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dictionary_map.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2805">
-              <caret line="165" column="1" selection-start-line="165" selection-start-column="1" selection-end-line="165" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Object_Notes.py">
+        <entry file="file://$PROJECT_DIR$/hangman.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="392">
-              <caret line="87" column="23" lean-forward="true" selection-start-line="87" selection-start-column="23" selection-end-line="87" selection-end-column="23" />
+            <state relative-caret-position="153">
+              <caret line="11" column="28" lean-forward="true" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
               <folding>
-                <element signature="e#1691#2076#0" />
-                <element signature="e#1746#1827#0" />
-                <element signature="e#1872#1940#0" />
-                <element signature="e#1965#2057#0" />
-                <element signature="e#2557#2780#0" />
-                <element signature="e#2584#2737#0" />
-                <marker date="1550252565208" expanded="true" signature="43:48" ph="..." />
-                <marker date="1550252565208" expanded="true" signature="2084:2635" ph="..." />
+                <element signature="e#22#286#0" />
+                <element signature="e#421#1925#0" />
+                <element signature="e#649#707#0" />
+                <element signature="e#730#1155#0" />
+                <element signature="e#774#835#0" />
+                <element signature="e#1072#1134#0" />
+                <element signature="e#1012#1125#0" />
+                <element signature="e#1246#1389#0" />
+                <element signature="e#1619#1686#0" />
+                <element signature="e#1979#3475#0" />
+                <element signature="e#2198#2260#0" />
+                <element signature="e#2279#2829#0" />
+                <element signature="e#2360#2421#0" />
+                <element signature="e#2516#2585#0" />
+                <element signature="e#2685#2798#0" />
+                <element signature="e#2920#3120#0" />
+                <element signature="e#3168#3235#0" />
               </folding>
             </state>
           </provider>
@@ -100,6 +101,7 @@
         <option value="$PROJECT_DIR$/Special_Random.py" />
         <option value="$PROJECT_DIR$/dictionary_map.py" />
         <option value="$PROJECT_DIR$/Object_Notes.py" />
+        <option value="$PROJECT_DIR$/hangman.py" />
       </list>
     </option>
   </component>
@@ -123,8 +125,8 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Special_Random.py" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/hangman.py" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -138,7 +140,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.Object_Notes">
+  <component name="RunManager" selected="Python.hangman">
     <configuration name="Object_Notes" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="CSE" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -183,12 +185,35 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="hangman" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="CSE" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/hangman.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Python.dictionary_map" />
       <item itemvalue="Python.Object_Notes" />
+      <item itemvalue="Python.hangman" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.hangman" />
         <item itemvalue="Python.Object_Notes" />
         <item itemvalue="Python.dictionary_map" />
       </list>
@@ -215,7 +240,7 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3295082" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3295082" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -223,9 +248,9 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" />
-      <window_info anchor="bottom" id="Python Console" order="12" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.3295082" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.3295082" />
+      <window_info anchor="bottom" id="Python Console" order="12" weight="0.3295082" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -254,26 +279,45 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dictionary_map.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2805">
-          <caret line="165" column="1" selection-start-line="165" selection-start-column="1" selection-end-line="165" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Object_Notes.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="392">
-          <caret line="87" column="23" lean-forward="true" selection-start-line="87" selection-start-column="23" selection-end-line="87" selection-end-column="23" />
+          <caret line="87" column="23" selection-start-line="87" selection-start-column="23" selection-end-line="87" selection-end-column="23" />
           <folding>
-            <element signature="e#1691#2076#0" />
-            <element signature="e#1746#1827#0" />
             <element signature="e#1872#1940#0" />
-            <element signature="e#1965#2057#0" />
-            <element signature="e#2557#2780#0" />
-            <element signature="e#2584#2737#0" />
-            <marker date="1550252565208" expanded="true" signature="43:48" ph="..." />
-            <marker date="1550252565208" expanded="true" signature="2084:2635" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dictionary_map.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="190" selection-start-line="190" selection-end-line="190" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hangman.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="11" column="28" lean-forward="true" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
+          <folding>
+            <element signature="e#22#286#0" />
+            <element signature="e#421#1925#0" />
+            <element signature="e#649#707#0" />
+            <element signature="e#730#1155#0" />
+            <element signature="e#774#835#0" />
+            <element signature="e#1072#1134#0" />
+            <element signature="e#1012#1125#0" />
+            <element signature="e#1246#1389#0" />
+            <element signature="e#1619#1686#0" />
+            <element signature="e#1979#3475#0" />
+            <element signature="e#2198#2260#0" />
+            <element signature="e#2279#2829#0" />
+            <element signature="e#2360#2421#0" />
+            <element signature="e#2516#2585#0" />
+            <element signature="e#2685#2798#0" />
+            <element signature="e#2920#3120#0" />
+            <element signature="e#3168#3235#0" />
           </folding>
         </state>
       </provider>
