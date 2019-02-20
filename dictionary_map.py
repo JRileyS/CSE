@@ -48,8 +48,8 @@ world_map = {
     },
     'SOUTH_PATH': {
         'NAME': "Southern Path",
-        'DESCRIPTION': "You find only two paths to go: one to the "
-                       "south, and one to the north, back to your "
+        'DESCRIPTION': "You find three paths to go: one to the "
+                       "south, one to the west, and one to the north, back to your "
                        "starting point.",
         'PATHS': {
             'NORTH': 'START_ROOM',
