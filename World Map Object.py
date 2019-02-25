@@ -19,6 +19,15 @@ eastern_path = Room("Eastern Path", "You can see paths to the east and north, al
                                     "you started.", None, None, None, StartRoom)
 western_path = Room("Western Path", "You can see a path to your west, a path south, and a path back east to your "
                                     "starting point.", None, None, StartRoom, None)
+ne_path = Room("Armory", "You find some abandoned armor here, along with a large number of steaks. Maybe someone was"
+                         " here before you? There are also paths south and west.", None, eastern_path, None,
+               northern_path)
+nw_path = Room("Northwest Path", "You can barely see anything except the paths to the south and east.",
+               None, western_path, northern_path, None)
+se_path = Room("Southeast Path", "You can only see paths to the north and west.", eastern_path, None, None,
+               southern_path)
+sw_path = Room("Southwest Path", "You're surrounded by trees, but there are paths to the north and east.",
+               western_path, None, southern_path, None)
 northern_dog = Room("Dog Room (North)", "There's a pomeranian here, just sitting down and drawing a picture. Maybe, "
                                         "just maybe, you can befriend it...? There are also paths north and south.",
                     None, northern_path, None, None)
