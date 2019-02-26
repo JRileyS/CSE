@@ -8,6 +8,31 @@ class Room(object):
         self.west = west
 
 
+class Player(object):
+    def __init__(self, starting_location):
+        self.current_location = starting_location
+        self.inventory = []
+        self.armor_head = []
+        self.armor_torso = []
+        self.armor_legs = []
+        self.flavor = "Salty"
+
+    def move(self, new_location):
+        """This moves the player to a new room.
+
+        :param new_location: The room object of which you are going to move to.
+        """
+        self.current_location = new_location
+
+    def find_next_room(self, direction):
+        """This method searches the current room to see if a room exists in that direction.
+
+        :param direction: The direction you want to move to.
+        :return: The Room object if it exists, or None if not.
+        """
+        return getattr(self.current_location, direction)
+
+
 # Option 1 - Define as we go
 StartRoom = Room("Starting Room", "You're suddenly in a strange forest, in the middle of an island. How'd you get "
                                   "here? There's paths to each cardinal direction.")
@@ -52,11 +77,20 @@ water = Room("The Ocean", "You're riding a boat on the ocean. You're escaping th
 win = Room("You Win!", "You successfully escaped the island of dogs, and you can restart by running the program "
                        "again.", None, None, None, None)
 
+
 StartRoom.north = northern_path
 StartRoom.south = southern_path
 StartRoom.east = eastern_path
 StartRoom.west = western_path
 northern_path.north = northern_dog
+northern_path.east = ne_path
+northern_path.west = nw_path
+southern_path.east = se_path
+southern_path.west = sw_path
+eastern_path.north = ne_path
+eastern_path.south = se_path
+western_path.north = nw_path
+western_path.south = sw_path
 southern_path.south = southern_dog
 eastern_path.east = eastern_dog
 western_path.west = western_dog
@@ -66,6 +100,29 @@ eastern_dog.east = eee_path
 western_dog.west = www_path
 www_path.west = water
 water.west = win
+
+player = Player(StartRoom)
+playing = True
+directions = ['north', 'south', 'east', 'west', 'up', 'down']
+
+while playing:
+    print(player.current_location.name)
+    print(player.current_location.description)
+    command = input("> ")
+    if command.lower() in ['q', 'quit', 'exit']:
+        playing = False
+    elif command.lower() in ['restart']:
+        player.current_location = StartRoom
+    elif command.lower() in directions:
+        try:
+            next_room = player.find_next_room(command)
+            player.move(next_room)
+        except KeyError:
+            print("You can't go that way.")
+    elif command.lower() in ['zork']:
+        print("Wrong game.")
+    else:
+        print("I don't know that command.")
 
 # Sonnet I #
 
