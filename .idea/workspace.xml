@@ -9,76 +9,78 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/CSE$Object_Notes.coverage" NAME="Object_Notes Coverage Results" MODIFIED="1550252081294" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/CSE$Object_Notes.coverage" NAME="Object_Notes Coverage Results" MODIFIED="1551289438501" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/CSE$dictionary_map.coverage" NAME="dictionary_map Coverage Results" MODIFIED="1550077944201" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/CSE$World_Map_Object.coverage" NAME="World Map Object Coverage Results" MODIFIED="1551202984992" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/CSE$World_Map_Object.coverage" NAME="World Map Object Coverage Results" MODIFIED="1551288669804" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/CSE$hangman.coverage" NAME="hangman Coverage Results" MODIFIED="1550770317586" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FUSProjectUsageTrigger">
     <session id="1132689934">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="12" />
+          <entry key="project.closed" value="13" />
           <entry key="project.open.time.15" value="1" />
           <entry key="project.open.time.25" value="1" />
           <entry key="project.open.time.29" value="1" />
           <entry key="project.open.time.39" value="1" />
           <entry key="project.open.time.41" value="2" />
           <entry key="project.open.time.42" value="1" />
-          <entry key="project.open.time.43" value="1" />
+          <entry key="project.open.time.43" value="2" />
           <entry key="project.open.time.56" value="1" />
           <entry key="project.open.time.58" value="1" />
           <entry key="project.open.time.61" value="1" />
           <entry key="project.open.time.75" value="1" />
           <entry key="project.open.time.8" value="1" />
           <entry key="project.open.time.83" value="1" />
-          <entry key="project.opened" value="14" />
+          <entry key="project.opened" value="15" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="py" value="10" />
+          <entry key="py" value="11" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Python" value="10" />
+          <entry key="Python" value="11" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="13620" />
+          <entry key="py" value="14193" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="13620" />
+          <entry key="Python" value="14193" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/World Map Object.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="443">
-              <caret line="104" column="14" lean-forward="true" selection-start-line="104" selection-start-column="14" selection-end-line="104" selection-end-column="14" />
+            <state relative-caret-position="166">
+              <caret line="21" column="83" selection-start-line="21" selection-start-column="83" selection-end-line="21" selection-end-column="83" />
               <folding>
-                <element signature="e#24#276#0" />
-                <element signature="e#4772#4784#0" />
-                <marker date="1551203076676" expanded="true" signature="802:807" ph="..." />
-                <marker date="1551203076676" expanded="true" signature="802:1091" ph="..." />
+                <element signature="e#6542#6554#0" />
+                <marker date="1551289247266" expanded="true" signature="326:644" ph="..." />
+                <marker date="1551289247266" expanded="true" signature="1167:1172" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dictionary_map.py">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Object_Notes.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="443">
-              <caret line="189" column="43" lean-forward="true" selection-start-line="189" selection-start-column="43" selection-end-line="189" selection-end-column="43" />
+            <state relative-caret-position="222">
+              <caret line="97" column="108" selection-start-line="97" selection-start-column="108" selection-end-line="97" selection-end-column="108" />
+              <folding>
+                <element signature="e#48#1383#0" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -100,10 +102,10 @@
       <list>
         <option value="$PROJECT_DIR$/notes.py" />
         <option value="$PROJECT_DIR$/Special_Random.py" />
-        <option value="$PROJECT_DIR$/Object_Notes.py" />
         <option value="$PROJECT_DIR$/hangman.py" />
         <option value="$PROJECT_DIR$/dictionary_map.py" />
         <option value="$PROJECT_DIR$/World Map Object.py" />
+        <option value="$PROJECT_DIR$/Object_Notes.py" />
       </list>
     </option>
   </component>
@@ -127,7 +129,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/dictionary_map.py" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Object_Notes.py" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunDashboard">
@@ -142,7 +144,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.World Map Object">
+  <component name="RunManager" selected="Python.Object_Notes">
     <configuration name="Object_Notes" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="CSE" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -239,9 +241,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.Object_Notes" />
         <item itemvalue="Python.World Map Object" />
         <item itemvalue="Python.hangman" />
-        <item itemvalue="Python.Object_Notes" />
         <item itemvalue="Python.dictionary_map" />
       </list>
     </recent_temporary>
@@ -306,13 +308,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Object_Notes.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="392">
-          <caret line="87" column="23" selection-start-line="87" selection-start-column="23" selection-end-line="87" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/hangman.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="799">
@@ -322,20 +317,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/dictionary_map.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="443">
-          <caret line="189" column="43" lean-forward="true" selection-start-line="189" selection-start-column="43" selection-end-line="189" selection-end-column="43" />
+        <state relative-caret-position="327">
+          <caret line="189" column="43" selection-start-line="189" selection-start-column="43" selection-end-line="189" selection-end-column="43" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/World Map Object.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="443">
-          <caret line="104" column="14" lean-forward="true" selection-start-line="104" selection-start-column="14" selection-end-line="104" selection-end-column="14" />
+        <state relative-caret-position="166">
+          <caret line="21" column="83" selection-start-line="21" selection-start-column="83" selection-end-line="21" selection-end-column="83" />
           <folding>
-            <element signature="e#24#276#0" />
-            <element signature="e#4772#4784#0" />
-            <marker date="1551203076676" expanded="true" signature="802:807" ph="..." />
-            <marker date="1551203076676" expanded="true" signature="802:1091" ph="..." />
+            <element signature="e#6542#6554#0" />
+            <marker date="1551289247266" expanded="true" signature="326:644" ph="..." />
+            <marker date="1551289247266" expanded="true" signature="1167:1172" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Object_Notes.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="222">
+          <caret line="97" column="108" selection-start-line="97" selection-start-column="108" selection-end-line="97" selection-end-column="108" />
+          <folding>
+            <element signature="e#48#1383#0" />
           </folding>
         </state>
       </provider>

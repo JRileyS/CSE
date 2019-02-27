@@ -1,5 +1,6 @@
 import Special_Random
 
+
 class Phone(object):
     def __init__(self, carrier, charge_left=50):
         # These are attributes that the object has.
@@ -60,7 +61,8 @@ class Steak(object):
         self.freshness = freshness
         self.number = number
 
-    def freshen(self, freshness):
+    @staticmethod
+    def freshen(freshness):
         freshness += 1
         if freshness > 10:
             freshness = 10
@@ -83,15 +85,21 @@ class Dog(object):
     def bite(self):
         self.angry = False
         self.happy = True
+        self.breed = "pomeranian"
+        self.size = "big"
+        self.color = "white"
         if self.happy:
-            print("The dog did not bite you. You're glad it doesn't.")
+            print("The " + self.size + " " + self.color + " " + self.breed + " did not bite you. You're glad it "
+                                                                             "doesn't.")
         elif self.angry:
-            print("The dog bit you angrily! Ouch! That seemed like a critical hit.")
+            print("The " + self.size + " " + self.color + " " + self.breed + " bit you angrily! Ouch! That seemed "
+                                                                             "like a critical hit.")
         else:
-            print("The dog nipped on you! You're glad the dog didn't use its full power.")
+            print("The " + self.size + " " + self.color + " " + self.breed + " nipped on you! You're glad it"
+                                                                             " didn't use its full power.")
 
     def feed(self, number):
-        if exists:
+        if Steak.exists:
             number -= 1
             if self.angry:
                 self.angry = False
@@ -99,5 +107,6 @@ class Dog(object):
             print("The dog became happy!")
         else:
             print("You don't have anything to feed the dog.")
+
 
 print(Dog.bite(Dog))

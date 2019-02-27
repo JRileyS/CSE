@@ -6,6 +6,20 @@ class Room(object):
         self.south = south
         self.east = east
         self.west = west
+        self.characters = []
+
+
+class Dog(object):
+    def __init__(self):
+        self.mood = "angry"
+        self.breed = "pomeranian"
+        self.hits_left = 3
+
+    def hit(self, hits_left):
+        self.mood = "angry"
+        self.breed = "pomeranian"
+        hits_left -= 1
+        print("You hit the " + self.mood + " " + self.breed + "! It takes 1 damage!")
 
 
 class Player(object):
@@ -15,7 +29,7 @@ class Player(object):
         self.armor_head = []
         self.armor_torso = []
         self.armor_legs = []
-        self.flavor = "Salty"
+        self.flavor = "salty"
 
     def move(self, new_location):
         """This moves the player to a new room.
@@ -116,9 +130,13 @@ while playing:
     elif command.lower() in directions:
         try:
             next_room = player.find_next_room(command)
+            if next_room is None:
+                raise AttributeError
             player.move(next_room)
         except KeyError:
             print("You can't go that way.")
+        except AttributeError:
+            print("This path doesn't exist.")
     elif command.lower() in ['zork']:
         print("Wrong game.")
     else:
