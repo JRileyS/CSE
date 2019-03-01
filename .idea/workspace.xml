@@ -12,17 +12,19 @@
     <SUITE FILE_PATH="coverage/CSE$Object_Notes.coverage" NAME="Object_Notes Coverage Results" MODIFIED="1551289438501" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/CSE$dictionary_map.coverage" NAME="dictionary_map Coverage Results" MODIFIED="1550077944201" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/CSE$World_Map_Object.coverage" NAME="World Map Object Coverage Results" MODIFIED="1551288669804" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/CSE$Inheritance.coverage" NAME="Inheritance Coverage Results" MODIFIED="1551375856862" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/CSE$Inheritance.coverage" NAME="Inheritance Coverage Results" MODIFIED="1551465089450" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/CSE$Item.coverage" NAME="Item Coverage Results" MODIFIED="1551465093371" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/CSE$hangman.coverage" NAME="hangman Coverage Results" MODIFIED="1550770317586" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FUSProjectUsageTrigger">
     <session id="1132689934">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="13" />
+          <entry key="project.closed" value="15" />
           <entry key="project.open.time.15" value="1" />
           <entry key="project.open.time.25" value="1" />
           <entry key="project.open.time.29" value="1" />
+          <entry key="project.open.time.37" value="1" />
           <entry key="project.open.time.39" value="1" />
           <entry key="project.open.time.41" value="2" />
           <entry key="project.open.time.42" value="1" />
@@ -33,27 +35,27 @@
           <entry key="project.open.time.75" value="1" />
           <entry key="project.open.time.8" value="1" />
           <entry key="project.open.time.83" value="1" />
-          <entry key="project.opened" value="16" />
+          <entry key="project.opened" value="17" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="py" value="12" />
+          <entry key="py" value="13" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Python" value="12" />
+          <entry key="Python" value="13" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="15198" />
+          <entry key="py" value="16105" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="15198" />
+          <entry key="Python" value="16105" />
         </counts>
       </usages-collector>
     </session>
@@ -63,11 +65,44 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/World Map Object.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="21" column="83" selection-start-line="21" selection-start-column="83" selection-end-line="21" selection-end-column="83" />
+            <state relative-caret-position="102">
+              <caret line="46" column="56" selection-start-line="46" selection-start-column="56" selection-end-line="46" selection-end-column="56" />
               <folding>
-                <marker date="1551289247266" expanded="true" signature="326:644" ph="..." />
-                <marker date="1551289247266" expanded="true" signature="1167:1172" ph="..." />
+                <element signature="e#24#305#0" />
+                <element signature="e#331#641#0" />
+                <element signature="e#670#1453#0" />
+                <element signature="e#717#904#0" />
+                <element signature="e#948#1125#0" />
+                <element signature="e#948#1080#1" />
+                <element signature="e#1176#1453#0" />
+                <element signature="e#1176#1396#1" />
+                <marker date="1551464229683" expanded="true" signature="326:644" ph="..." />
+                <marker date="1551464229683" expanded="false" signature="1167:1172" ph="..." />
+                <marker date="1551464229683" expanded="true" signature="1453:1456" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Item.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="528">
+              <caret line="57" lean-forward="true" selection-start-line="57" selection-end-line="57" />
+              <folding>
+                <element signature="e#24#65#0" />
+                <element signature="e#52#65#0" />
+                <element signature="e#91#165#0" />
+                <element signature="e#119#165#0" />
+                <element signature="e#192#290#0" />
+                <element signature="e#317#415#0" />
+                <element signature="e#442#540#0" />
+                <element signature="e#508#605#0" />
+                <marker date="1551465403156" expanded="false" signature="19:24" ph="..." />
+                <marker date="1551465403156" expanded="false" signature="86:91" ph="..." />
+                <marker date="1551465403156" expanded="true" signature="562:667" ph="..." />
+                <marker date="1551465403156" expanded="true" signature="693:698" ph="..." />
+                <marker date="1551465403156" expanded="true" signature="951:1169" ph="..." />
               </folding>
             </state>
           </provider>
@@ -76,22 +111,21 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Object_Notes.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="222">
+            <state relative-caret-position="1649">
               <caret line="97" column="108" selection-start-line="97" selection-start-column="108" selection-end-line="97" selection-end-column="108" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Inheritance.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="460">
-              <caret line="63" column="5" selection-start-line="63" selection-start-column="5" selection-end-line="63" selection-end-column="5" />
+            <state relative-caret-position="86">
+              <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="41" />
               <folding>
-                <element signature="e#55#71#0" />
-                <marker date="1551375856772" expanded="false" signature="22:27" ph="..." />
-                <marker date="1551375856772" expanded="true" signature="861:866" ph="..." />
-                <marker date="1551375856772" expanded="true" signature="1108:1113" ph="..." />
+                <marker date="1551463364158" expanded="false" signature="22:27" ph="..." />
+                <marker date="1551463364158" expanded="true" signature="861:866" ph="..." />
+                <marker date="1551463364158" expanded="true" signature="1109:1114" ph="..." />
               </folding>
             </state>
           </provider>
@@ -116,9 +150,10 @@
         <option value="$PROJECT_DIR$/Special_Random.py" />
         <option value="$PROJECT_DIR$/hangman.py" />
         <option value="$PROJECT_DIR$/dictionary_map.py" />
-        <option value="$PROJECT_DIR$/World Map Object.py" />
         <option value="$PROJECT_DIR$/Object_Notes.py" />
         <option value="$PROJECT_DIR$/Inheritance.py" />
+        <option value="$PROJECT_DIR$/World Map Object.py" />
+        <option value="$PROJECT_DIR$/Item.py" />
       </list>
     </option>
   </component>
@@ -157,7 +192,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.Inheritance">
+  <component name="RunManager" selected="Python.Item">
     <configuration name="Inheritance" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="CSE" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -172,6 +207,28 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Inheritance.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Item" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="CSE" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Item.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -224,28 +281,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="dictionary_map" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="CSE" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/dictionary_map.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="hangman" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="CSE" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -269,19 +304,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.dictionary_map" />
       <item itemvalue="Python.Object_Notes" />
       <item itemvalue="Python.hangman" />
       <item itemvalue="Python.World Map Object" />
       <item itemvalue="Python.Inheritance" />
+      <item itemvalue="Python.Item" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.Item" />
         <item itemvalue="Python.Inheritance" />
         <item itemvalue="Python.Object_Notes" />
         <item itemvalue="Python.World Map Object" />
         <item itemvalue="Python.hangman" />
-        <item itemvalue="Python.dictionary_map" />
       </list>
     </recent_temporary>
   </component>
@@ -359,33 +394,63 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/World Map Object.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="83" selection-start-line="21" selection-start-column="83" selection-end-line="21" selection-end-column="83" />
-          <folding>
-            <marker date="1551289247266" expanded="true" signature="326:644" ph="..." />
-            <marker date="1551289247266" expanded="true" signature="1167:1172" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Object_Notes.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="222">
+        <state relative-caret-position="1649">
           <caret line="97" column="108" selection-start-line="97" selection-start-column="108" selection-end-line="97" selection-end-column="108" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Inheritance.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="63" column="5" selection-start-line="63" selection-start-column="5" selection-end-line="63" selection-end-column="5" />
+        <state relative-caret-position="86">
+          <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="41" />
           <folding>
-            <element signature="e#55#71#0" />
-            <marker date="1551375856772" expanded="false" signature="22:27" ph="..." />
-            <marker date="1551375856772" expanded="true" signature="861:866" ph="..." />
-            <marker date="1551375856772" expanded="true" signature="1108:1113" ph="..." />
+            <marker date="1551463364158" expanded="false" signature="22:27" ph="..." />
+            <marker date="1551463364158" expanded="true" signature="861:866" ph="..." />
+            <marker date="1551463364158" expanded="true" signature="1109:1114" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/World Map Object.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="46" column="56" selection-start-line="46" selection-start-column="56" selection-end-line="46" selection-end-column="56" />
+          <folding>
+            <element signature="e#24#305#0" />
+            <element signature="e#331#641#0" />
+            <element signature="e#670#1453#0" />
+            <element signature="e#717#904#0" />
+            <element signature="e#948#1125#0" />
+            <element signature="e#948#1080#1" />
+            <element signature="e#1176#1453#0" />
+            <element signature="e#1176#1396#1" />
+            <marker date="1551464229683" expanded="true" signature="326:644" ph="..." />
+            <marker date="1551464229683" expanded="false" signature="1167:1172" ph="..." />
+            <marker date="1551464229683" expanded="true" signature="1453:1456" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Item.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="57" lean-forward="true" selection-start-line="57" selection-end-line="57" />
+          <folding>
+            <element signature="e#24#65#0" />
+            <element signature="e#52#65#0" />
+            <element signature="e#91#165#0" />
+            <element signature="e#119#165#0" />
+            <element signature="e#192#290#0" />
+            <element signature="e#317#415#0" />
+            <element signature="e#442#540#0" />
+            <element signature="e#508#605#0" />
+            <marker date="1551465403156" expanded="false" signature="19:24" ph="..." />
+            <marker date="1551465403156" expanded="false" signature="86:91" ph="..." />
+            <marker date="1551465403156" expanded="true" signature="562:667" ph="..." />
+            <marker date="1551465403156" expanded="true" signature="693:698" ph="..." />
+            <marker date="1551465403156" expanded="true" signature="951:1169" ph="..." />
           </folding>
         </state>
       </provider>
