@@ -6,39 +6,48 @@ class Item(object):
 
 
 class Armor(Item):
-    def __init__(self):
+    def __init__(self, equipable, durability):
         super(Armor, self).__init__("Armor", 999, 1)
         self.equipable = equipable
         self.durability = durability
 
 
 class Helmet(Armor):
-    def __init__(self):
+    def __init__(self, defense):
         super(Helmet, self).__init__(True, 999)
         self.defense = defense
 
 
 class Torso(Armor):
-    def __init__(self):
+    def __init__(self, defense):
         super(Torso, self).__init__(True, 999)
         self.defense = defense
 
 
 class Boots(Armor):
-    def __init__(self):
+    def __init__(self, defense):
         super(Boots, self).__init__(True, 999)
         self.defense = defense
 
 
 class Weapon(Item):
     def __init__(self):
+        super(Weapon, self).__init__(True, 999, 1)
         self.uses = 999
         self.equipable = True
         self.attack = 1
 
 
+class Food(Item):
+    def __init__(self, taste, size):
+        super(Food, self).__init__("Food", 1, 1)
+        self.taste = taste
+        self.size = size
+
+
 class BaseballCap(Helmet):
     def __init__(self):
+        super(BaseballCap, self).__init__(3)
         self.uses = 999
         self.equipable = True
         self.defense = 3
@@ -48,6 +57,7 @@ class BaseballCap(Helmet):
 
 class PlanetBuster(Weapon):
     def __init__(self):
+        super(PlanetBuster, self).__init__()
         self.uses = 999
         self.equipable = True
         self.attack = 24
@@ -57,6 +67,7 @@ class PlanetBuster(Weapon):
 
 class IdArmor(Torso):
     def __init__(self):
+        super(IdArmor, self).__init__(32)
         self.uses = 999
         self.equipable = True
         self.defense = 32
@@ -66,6 +77,7 @@ class IdArmor(Torso):
 
 class BottleRocket(Weapon):
     def __init__(self):
+        super(BottleRocket, self).__init__()
         self.equipable = True
         self.uses = 1
         self.attack = 64
@@ -73,8 +85,9 @@ class BottleRocket(Weapon):
         self.description = "A very powerful bottle rocket by a young Mr. Andonuts. Can only be used once."
 
 
-class BalletShoes(Boots):
+class BalletShoes(Weapon):
     def __init__(self):
+        super(BalletShoes, self).__init__()
         self.uses = 999
         self.name = "Ballet Shoes"
         self.description = "These used shoes make you feel incredibly dangerous."
@@ -84,6 +97,7 @@ class BalletShoes(Boots):
 
 class DustyTutu(Torso):
     def __init__(self):
+        super(DustyTutu, self).__init__(3)
         self.uses = 999
         self.name = "Dusty Tutu"
         self.description = "Finally, a PROTECTIVE piece of armor."
@@ -93,6 +107,7 @@ class DustyTutu(Torso):
 
 class MysteryCloak(Torso):
     def __init__(self):
+        super(MysteryCloak, self).__init__(6)
         self.uses = 999
         self.name = "Mystery Man's Cloak"
         self.description = "The cloak of someone known only as the 'Mystery Man.' It looks like it's made out of " \
@@ -103,8 +118,25 @@ class MysteryCloak(Torso):
 
 class SpadeOutfit(Torso):
     def __init__(self):
+        super(SpadeOutfit, self).__init__(1)
         self.uses = 999
-        self.name = "Ace Outfit"
+        self.name = "Ace Outfit (Spade Variation)"
         self.description = "Not to call a spade a spade, but this is a spade."
         self.equipable = True
         self.defense = 1
+
+
+class JammyDodger(Food):
+    def __init__(self):
+        super(JammyDodger, self).__init__("Sweet", "Small")
+        self.hp_heal = 2
+        self.name = "Jammy Dodger"
+        self.description = "A cookie with jam in the middle. Popular in Britain. Heals 2 HP."
+
+
+class Steak(Food):
+    def __init__(self):
+        super(Steak, self).__init__("Savory", "Big")
+        self.hp_heal = 15
+        self.name = "Steak"
+        self.description = "A large, medium-well steak. It's really salty. Heals 15 HP."
