@@ -45,6 +45,13 @@ class Food(Item):
         self.size = size
 
 
+class Consumable(Item):
+    def __init__(self, size, effect):
+        super(Consumable, self).__init__("Consumable", 1, 1)
+        self.size = size
+        self.effect = effect
+
+
 class BaseballCap(Helmet):
     def __init__(self):
         super(BaseballCap, self).__init__(3)
@@ -140,3 +147,62 @@ class Steak(Food):
         self.hp_heal = 15
         self.name = "Steak"
         self.description = "A large, medium-well steak. It's really salty. Heals 15 HP."
+
+
+class Grasshopper(Food):
+    def __init__(self):
+        super(Grasshopper, self).__init__("Savory", "Small")
+        self.hp_heal = 1
+        self.name = "Grasshopper"
+        self.description = "A chocolate-covered grasshopper. It's not too tasty, but it'll have to do."
+
+
+class Inhaler(Consumable):
+    def __init__(self):
+        super(Inhaler, self).__init__("Small", "Status Heal")
+        self.name = "Asthma Inhaler"
+        self.description = "An inhaler for asthma. If you have an asthma attack, it'll be pretty handy."
+
+
+class SmokeBomb(Consumable):
+    def __init__(self):
+        super(SmokeBomb, self).__init__("Small", "Battle Effect")
+        self.name = "Smoke Bomb"
+        self.description = "A small smoke bomb. It'll make smoke appear wherever you use it."
+
+
+class WarHorn(Weapon):
+    def __init__(self):
+        super(WarHorn, self).__init__()
+        self.equipable = True
+        self.uses = 999
+        self.attack = 20
+        self.name = "War Horn"
+        self.description = "You can blast away your opponents with these harsh sounds!"
+
+
+class WaterGun(Weapon):
+    def __init__(self):
+        super(WaterGun, self).__init__()
+        self.equipable = True
+        self.uses = 999
+        self.attack = 2
+        self.name = "Water Gun"
+        self.description = "A small water gun. It's extremely effective against things made of fire, unsurprisingly."
+
+
+class PencilBlade(Weapon):
+    def __init__(self):
+        super(PencilBlade, self).__init__()
+        self.equipable = True
+        self.uses = 999
+        self.attack = 7
+        self.name = "Pencil Blade"
+        self.description = "A wooden blade with a carbon-reinforced core."
+
+
+class Jevilstail(Torso):
+    def __init__(self):
+        super(Jevilstail, self).__init__(5)
+        self.name = "Jevilstail"
+        self.description = "You didn't know you'd grow a tail. It's pretty chaotic, honestly."
