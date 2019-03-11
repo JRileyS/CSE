@@ -90,7 +90,7 @@ class IdArmor(Torso):
         self.equipable = True
         self.defense = 32
         self.name = "Armor of THE ID"
-        self.description = "An armor based on the representation of your Id. It's slimy..."
+        self.description = "An armor based on the representation of your Id. It's really slimy..."
 
 
 class BottleRocket(Weapon):
@@ -100,7 +100,7 @@ class BottleRocket(Weapon):
         self.uses = 1
         self.attack = 64
         self.name = "Jeff's Bottle Rocket"
-        self.description = "A very powerful bottle rocket by a young Mr. Andonuts. Can only be used once."
+        self.description = "A very powerful bottle rocket by a young Jeff Andonuts. Can only be used once."
 
 
 class BalletShoes(Weapon):
@@ -110,17 +110,17 @@ class BalletShoes(Weapon):
         self.name = "Ballet Shoes"
         self.description = "These used shoes make you feel incredibly dangerous."
         self.equipable = True
-        self.attack = 1
+        self.attack = 7
 
 
-class DustyTutu(Torso):
+class OldTutu(Torso):
     def __init__(self):
-        super(DustyTutu, self).__init__(3)
+        super(OldTutu, self).__init__(3)
         self.uses = 999
-        self.name = "Dusty Tutu"
+        self.name = "Old Tutu"
         self.description = "Finally, a PROTECTIVE piece of armor."
         self.equipable = True
-        self.defense = 3
+        self.defense = 10
 
 
 class MysteryCloak(Torso):
