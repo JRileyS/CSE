@@ -275,7 +275,7 @@ eastern_dog = Room("Dog Room (East)", "You observe the dog that's in here. It se
 western_dog = Room("Dog Room (West)", "Are you seeing double? There are TWO dogs here. One has a scarf, and the other"
                                       "has a pilot's cap. Where do dogs even get clothes? Anyways, you should probably"
                                       "find a way to get around them.", None, None, western_path, None)
-nnn_path = Room("Far Northern Path", "You're past the Dog Room, and there's a broken boat here. If you found some"
+nnn_path = Room("Far Northern Path", "You're past the Dog Room, and there's a broken boat here. If you found some "
                                      "wood, you could fix it, but right now, you can't sail.", None, northern_dog, None,
                 None)
 sss_path = Room("Far Southern Path", "You're past the Southern Dog Room. There's a dead end here, but you can still "
@@ -335,7 +335,7 @@ while playing:
         except AttributeError:
             print("This path doesn't exist.")
     elif command.lower() in ['zork']:
-        print("Wrong game.")
+        print("This isn't The Great Underground Empire.")
     else:
         print("I don't know that command.")
 
