@@ -16,37 +16,63 @@ class Item(object):
         self.value = value
 
 
+armor_amt = 0
+
+
+class Character(object):
+    def __init__(self, name, health: int, armor, weapon):
+        self.name = name
+        self.health = health
+        self.armor = armor
+        self.weapon = weapon
+
+    def take_damage(self, damage: int):
+        if self.armor.armor_amt > damage:
+            print("The armor blocked the attack!")
+        else:
+            self.health -= damage - self.armor.armor_amt
+        print("%s has %d health left." % (self.name, self.health))
+
+    def attack(self, target):
+        print("%s attacks with %s for %d damage!" % (self.name, self.weapon.name, self.weapon.attack))
+        target.take_damage(self.weapon.attack)
+
+
 class Armor(Item):
-    def __init__(self, equipable, durability):
+    def __init__(self, equipable, durability, armor_amt: int):
         super(Armor, self).__init__("Armor", 999, 1)
         self.equipable = equipable
         self.durability = durability
+        self.armor_amt = armor_amt
 
 
 class Helmet(Armor):
     def __init__(self, defense):
-        super(Helmet, self).__init__(True, 999)
+        super(Helmet, self).__init__(True, 999, armor_amt)
         self.defense = defense
+        self.armor_amt = defense
 
 
 class Torso(Armor):
     def __init__(self, defense):
-        super(Torso, self).__init__(True, 999)
+        super(Torso, self).__init__(True, 999, armor_amt)
         self.defense = defense
+        self.armor_amt = defense
 
 
 class Boots(Armor):
     def __init__(self, defense):
-        super(Boots, self).__init__(True, 999)
+        super(Boots, self).__init__(True, 999, armor_amt)
         self.defense = defense
+        self.armor_amt = defense
 
 
 class Weapon(Item):
-    def __init__(self):
+    def __init__(self, uses, attack: int):
         super(Weapon, self).__init__(True, 999, 1)
-        self.uses = 999
+        self.uses = uses
         self.equipable = True
-        self.attack = 1
+        self.attack = attack
 
 
 class Food(Item):
@@ -75,7 +101,7 @@ class BaseballCap(Helmet):
 
 class PlanetBuster(Weapon):
     def __init__(self):
-        super(PlanetBuster, self).__init__()
+        super(PlanetBuster, self).__init__(999, 24)
         self.uses = 999
         self.equipable = True
         self.attack = 24
@@ -95,7 +121,7 @@ class IdArmor(Torso):
 
 class BottleRocket(Weapon):
     def __init__(self):
-        super(BottleRocket, self).__init__()
+        super(BottleRocket, self).__init__(1, 64)
         self.equipable = True
         self.uses = 1
         self.attack = 64
@@ -105,7 +131,7 @@ class BottleRocket(Weapon):
 
 class BalletShoes(Weapon):
     def __init__(self):
-        super(BalletShoes, self).__init__()
+        super(BalletShoes, self).__init__(999, 7)
         self.uses = 999
         self.name = "Ballet Shoes"
         self.description = "These used shoes make you feel incredibly dangerous."
@@ -184,7 +210,7 @@ class SmokeBomb(Consumable):
 
 class WarHorn(Weapon):
     def __init__(self):
-        super(WarHorn, self).__init__()
+        super(WarHorn, self).__init__(999, 20)
         self.equipable = True
         self.uses = 999
         self.attack = 20
@@ -194,7 +220,7 @@ class WarHorn(Weapon):
 
 class WaterGun(Weapon):
     def __init__(self):
-        super(WaterGun, self).__init__()
+        super(WaterGun, self).__init__(999, 2)
         self.equipable = True
         self.uses = 999
         self.attack = 2
@@ -204,9 +230,8 @@ class WaterGun(Weapon):
 
 class PencilBlade(Weapon):
     def __init__(self):
-        super(PencilBlade, self).__init__()
+        super(PencilBlade, self).__init__(999, 7)
         self.equipable = True
-        self.uses = 999
         self.attack = 7
         self.name = "Pencil Blade"
         self.description = "A wooden blade with a carbon-reinforced core."
@@ -217,6 +242,14 @@ class Jevilstail(Boots):
         super(Jevilstail, self).__init__(5)
         self.name = "Jevilstail"
         self.description = "You didn't know you'd grow a tail. It's pretty chaotic, honestly."
+
+
+# Character
+hippie = Character("New Age Retro Hippie", 100, SpadeOutfit(), PencilBlade())
+mystery_man = Character("Mystery Man", 100, MysteryCloak(), PlanetBuster())
+
+hippie.attack(mystery_man)
+mystery_man.attack(hippie)
 
 
 class Player(object):
