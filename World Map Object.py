@@ -27,23 +27,27 @@ class Character(object):
         self.weapon = weapon
 
     def take_damage(self, damage: int):
-        if self.armor.armor_amt > damage:
-            print("The armor blocked the attack!")
+        if self.health - (damage - self.armor.armor_amt) <= 0:
+            print("The %s became tame!" % self.name)
         else:
-            self.health -= damage - self.armor.armor_amt
-        print("%s has %d health left." % (self.name, self.health))
+            if self.armor.armor_amt > damage:
+                print("The armor blocked the attack!")
+            else:
+                self.health -= damage - self.armor.armor_amt
+            print("%s has %d health left." % (self.name, self.health))
 
     def attack(self, target):
-        print("%s attacks with %s for %d damage!" % (self.name, self.weapon.name, self.weapon.attack))
+        print("%s attacks with %s for %d damage!" % (self.name, self.weapon.name, (self.weapon.attack -
+                                                                                   target.armor.armor_amt)))
         target.take_damage(self.weapon.attack)
 
 
 class Armor(Item):
-    def __init__(self, equipable, durability, armor_amt: int):
+    def __init__(self, equipable, durability, armor_amt_equip: int):
         super(Armor, self).__init__("Armor", 999, 1)
         self.equipable = equipable
         self.durability = durability
-        self.armor_amt = armor_amt
+        self.armor_amt = armor_amt_equip
 
 
 class Helmet(Armor):
@@ -248,6 +252,14 @@ class Jevilstail(Boots):
 hippie = Character("New Age Retro Hippie", 100, SpadeOutfit(), PencilBlade())
 mystery_man = Character("Mystery Man", 100, MysteryCloak(), PlanetBuster())
 
+hippie.attack(mystery_man)
+mystery_man.attack(hippie)
+hippie.attack(mystery_man)
+mystery_man.attack(hippie)
+hippie.attack(mystery_man)
+mystery_man.attack(hippie)
+hippie.attack(mystery_man)
+mystery_man.attack(hippie)
 hippie.attack(mystery_man)
 mystery_man.attack(hippie)
 
