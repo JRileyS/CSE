@@ -37,8 +37,8 @@ class Character(object):
             print("%s has %d health left." % (self.name, self.health))
 
     def attack(self, target):
-        print("%s attacks with %s for %d damage!" % (self.name, self.weapon.name, (self.weapon.attack -
-                                                                                   target.armor.armor_amt)))
+        print("%s attacks %s with %s for %d damage!" % (self.name, target.name, self.weapon.name,
+                                                        (self.weapon.attack - target.armor.armor_amt)))
         target.take_damage(self.weapon.attack)
 
 
@@ -248,22 +248,6 @@ class Jevilstail(Boots):
         self.description = "You didn't know you'd grow a tail. It's pretty chaotic, honestly."
 
 
-# Character
-hippie = Character("New Age Retro Hippie", 100, SpadeOutfit(), PencilBlade())
-mystery_man = Character("Mystery Man", 100, MysteryCloak(), PlanetBuster())
-
-hippie.attack(mystery_man)
-mystery_man.attack(hippie)
-hippie.attack(mystery_man)
-mystery_man.attack(hippie)
-hippie.attack(mystery_man)
-mystery_man.attack(hippie)
-hippie.attack(mystery_man)
-mystery_man.attack(hippie)
-hippie.attack(mystery_man)
-mystery_man.attack(hippie)
-
-
 class Player(object):
     def __init__(self, starting_location):
         self.current_location = starting_location
@@ -272,6 +256,7 @@ class Player(object):
         self.armor_torso = []
         self.armor_legs = []
         self.flavor = "salty"
+        self.name = "You"
 
     def move(self, new_location):
         """This moves the player to a new room.
@@ -288,6 +273,21 @@ class Player(object):
         """
         return getattr(self.current_location, direction)
 
+
+# Character
+hippie = Character("New Age Retro Hippie", 100, OldTutu(), PencilBlade())
+mystery_man = Character("Mystery Man", 100, MysteryCloak(), PlanetBuster())
+
+hippie.attack(mystery_man)
+mystery_man.attack(hippie)
+hippie.attack(mystery_man)
+mystery_man.attack(hippie)
+hippie.attack(mystery_man)
+mystery_man.attack(hippie)
+hippie.attack(mystery_man)
+mystery_man.attack(hippie)
+hippie.attack(mystery_man)
+mystery_man.attack(hippie)
 
 # Option 1 - Define as we go
 StartRoom = Room("Starting Room", "You're suddenly in a strange forest, in the middle of an island. How'd you get "
@@ -383,20 +383,3 @@ while playing:
         print("This isn't The Great Underground Empire.")
     else:
         print("I don't know that command.")
-
-# Sonnet I #
-
-# From fairest creatures we desire increase,
-# That thereby beauty's rose might never die,
-# But as the riper should by time decease,
-# His tender heir might bear his memory:
-# But thou contracted to thine own bright eyes,
-# Feed'st thy light's flame with self-substantial fuel,
-# Making a famine where abundance lies,
-# Thy self thy foe, to thy sweet self too cruel:
-# Thou that art now the world's fresh ornament,
-# And only herald to the gaudy spring,
-# Within thine own bud buriest thy content,
-# And, tender churl, mak'st waste in niggarding:
-# Pity the world, or else this glutton be,
-# To eat the world's due, by the grave and thee.
