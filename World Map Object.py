@@ -1,5 +1,7 @@
 class Room(object):
-    def __init__(self, name, description, north=None, south=None, east=None, west=None):
+    def __init__(self, name, description, north=None, south=None, east=None, west=None, items=None):
+        if items is None:
+            items = []
         self.name = name
         self.description = description
         self.north = north
@@ -7,6 +9,7 @@ class Room(object):
         self.east = east
         self.west = west
         self.characters = []
+        self.items = items
 
 
 class Item(object):
@@ -274,7 +277,7 @@ class Player(object):
         return getattr(self.current_location, direction)
 
 
-# Character
+# Characters (Comment this out, this is for testing only)
 hippie = Character("New Age Retro Hippie", 100, OldTutu(), PencilBlade())
 mystery_man = Character("Mystery Man", 100, MysteryCloak(), PlanetBuster())
 
@@ -301,17 +304,17 @@ eastern_path = Room("Eastern Path", "You can see paths to the east and north, al
 western_path = Room("Western Path", "You can see a path to your west, a path south, and a path back east to your "
                                     "starting point.", None, None, StartRoom, None)
 ne_path = Room("Armory", "You find some abandoned armor here, along with a large number of steaks. Maybe someone was"
-                         " here before you? There are also paths south and west.", None, eastern_path, None,
-               northern_path)
-nw_path = Room("Northwest Path", "You can barely see anything except the paths to the south and east.",
-               None, western_path, northern_path, None)
-se_path = Room("Southeast Path", "You can only see paths to the north and west.", eastern_path, None, None,
-               southern_path)
-sw_path = Room("Southwest Path", "You're surrounded by trees, but there are paths to the north and east.",
-               western_path, None, southern_path, None)
+                         " here before you? There are also paths south and "
+                         "west.", None, eastern_path, None, northern_path, [IdArmor])
+nw_path = Room("Northwest Path", "You can barely see anything except the paths to the south and "
+                                 "east.", None, western_path, northern_path, None)
+se_path = Room("Southeast Path", "You can only see paths to the north and "
+                                 "west.", eastern_path, None, None, southern_path)
+sw_path = Room("Southwest Path", "You're surrounded by trees, but there are paths to the north and "
+                                 "east.", western_path, None, southern_path, None)
 northern_dog = Room("Dog Room (North)", "There's a pomeranian here, just sitting down and drawing a picture. Maybe, "
-                                        "just maybe, you can befriend it...? There are also paths north and south.",
-                    None, northern_path, None, None)
+                                        "just maybe, you can befriend it...? There are also paths north and "
+                                        "south.", None, northern_path, None, None)
 southern_dog = Room("Dog Room (South)", "There's a small dog jumping up and down. It seems to just be recording an "
                                         "animation. Maybe you could befriend it...?", southern_path, None, None, None)
 eastern_dog = Room("Dog Room (East)", "You observe the dog that's in here. It seems to be writing code on a laptop."
@@ -321,14 +324,14 @@ western_dog = Room("Dog Room (West)", "Are you seeing double? There are TWO dogs
                                       "has a pilot's cap. Where do dogs even get clothes? Anyways, you should probably"
                                       "find a way to get around them.", None, None, western_path, None)
 nnn_path = Room("Far Northern Path", "You're past the Dog Room, and there's a broken boat here. If you found some "
-                                     "wood, you could fix it, but right now, you can't sail.", None, northern_dog, None,
-                None)
+                                     "wood, you could fix it, but right now, you can't "
+                                     "sail.", None, northern_dog, None, None)
 sss_path = Room("Far Southern Path", "You're past the Southern Dog Room. There's a dead end here, but you can still "
                                      "go back.", southern_dog, None, None, None)
 eee_path = Room("Far Eastern Path", "There's a dead end past the Eastern Dog Room, but there is some wood here you "
                                     "can take.", None, None, None, eastern_dog)
-www_path = Room("Far Western Path", "There's a beach here. It might be a dead end, but you're at least past the dogs.",
-                None, None, western_dog, None)
+www_path = Room("Far Western Path", "There's a beach here. It might be a dead end, but you're at least past the "
+                                    "dogs.", None, None, western_dog, None)
 water = Room("The Ocean", "You're riding a boat on the ocean. You're escaping the island!", None, None, www_path, None)
 win = Room("You Win!", "You successfully escaped the island of dogs, and you can restart by running the program "
                        "again.", None, None, None, None)
