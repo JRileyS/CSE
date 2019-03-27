@@ -12,6 +12,9 @@ class Room(object):
         self.items = items
 
 
+Inventory = []
+
+
 class Item(object):
     def __init__(self, name, uses, value):
         self.uses = uses
@@ -305,7 +308,7 @@ western_path = Room("Western Path", "You can see a path to your west, a path sou
                                     "starting point.", None, None, StartRoom, None, None)
 ne_path = Room("Armory", "You find some abandoned armor here, along with a large number of steaks. Maybe someone was"
                          " here before you? There are also paths south and "
-                         "west.", None, eastern_path, None, northern_path, IdArmor)
+                         "west.", None, eastern_path, None, northern_path, [Item])
 nw_path = Room("Northwest Path", "You can barely see anything except the paths to the south and "
                                  "east.", None, western_path, northern_path, None, None)
 se_path = Room("Southeast Path", "You can only see paths to the north and "
@@ -387,8 +390,9 @@ while playing:
     elif command.lower() in ['zork']:
         print("This isn't The Great Underground Empire.")
     elif command.lower() in ['take']:
-        if Room.items:
-            print("You took the " + Room.items + ".")
+        if [] in Room:
+            Inventory += Item
+            print("You took the " + str(Item) + ".")
         else:
             print("There was nothing to take.")
     else:
