@@ -64,10 +64,13 @@ class Helmet(Armor):
 
 
 class Torso(Armor):
-    def __init__(self, defense):
-        super(Torso, self).__init__(True, 999, armor_amt)
+    def __init__(self, uses, defense, name, description):
+        super(Torso, self).__init__(True, 999, armor_amt, )
+        self.uses = uses
+        self.equipable = True
         self.defense = defense
-        self.armor_amt = defense
+        self.name = name
+        self.description = description
 
 
 class Boots(Armor):
@@ -78,11 +81,13 @@ class Boots(Armor):
 
 
 class Weapon(Item):
-    def __init__(self, uses, attack: int):
+    def __init__(self, uses, attack: int, name, description):
         super(Weapon, self).__init__(True, 999, 1)
         self.uses = uses
         self.equipable = True
         self.attack = attack
+        self.name = name
+        self.description = description
 
 
 class Food(Item):
@@ -111,7 +116,7 @@ class BaseballCap(Helmet):
 
 class PlanetBuster(Weapon):
     def __init__(self):
-        super(PlanetBuster, self).__init__(999, 24)
+        super(PlanetBuster, self).__init__(999, 24, "The Planet Buster", "A powerful sword you are lucky to brandish.")
         self.uses = 999
         self.equipable = True
         self.attack = 24
@@ -127,36 +132,6 @@ class IdArmor(Torso):
         self.defense = 32
         self.name = "Armor of THE ID"
         self.description = "An armor based on the representation of your Id. It's really slimy..."
-
-
-class BottleRocket(Weapon):
-    def __init__(self):
-        super(BottleRocket, self).__init__(1, 64)
-        self.equipable = True
-        self.uses = 1
-        self.attack = 64
-        self.name = "Jeff's Bottle Rocket"
-        self.description = "A very powerful bottle rocket by a young Jeff Andonuts. Can only be used once."
-
-
-class BalletShoes(Weapon):
-    def __init__(self):
-        super(BalletShoes, self).__init__(999, 7)
-        self.uses = 999
-        self.name = "Ballet Shoes"
-        self.description = "These used shoes make you feel incredibly dangerous."
-        self.equipable = True
-        self.attack = 7
-
-
-class OldTutu(Torso):
-    def __init__(self):
-        super(OldTutu, self).__init__(3)
-        self.uses = 999
-        self.name = "Old Tutu"
-        self.description = "Finally, a PROTECTIVE piece of armor."
-        self.equipable = True
-        self.defense = 10
 
 
 class MysteryCloak(Torso):
@@ -238,20 +213,11 @@ class WaterGun(Weapon):
         self.description = "A small water gun. It's extremely effective against things made of fire, unsurprisingly."
 
 
-class PencilBlade(Weapon):
-    def __init__(self):
-        super(PencilBlade, self).__init__(999, 7)
-        self.equipable = True
-        self.attack = 7
-        self.name = "Pencil Blade"
-        self.description = "A wooden blade with a carbon-reinforced core."
-
-
 class Jevilstail(Boots):
     def __init__(self):
         super(Jevilstail, self).__init__(5)
         self.name = "Jevilstail"
-        self.description = "You didn't know you'd grow a tail. It's pretty chaotic, honestly."
+        self.description = "A J-shaped tail that gives you chaotic energy."
 
 
 class Player(object):
@@ -281,19 +247,10 @@ class Player(object):
 
 
 # Characters (Comment this out, this is for testing only)
-hippie = Character("New Age Retro Hippie", 100, OldTutu(), PencilBlade())
-mystery_man = Character("Mystery Man", 100, MysteryCloak(), PlanetBuster())
-
-hippie.attack(mystery_man)
-mystery_man.attack(hippie)
-hippie.attack(mystery_man)
-mystery_man.attack(hippie)
-hippie.attack(mystery_man)
-mystery_man.attack(hippie)
-hippie.attack(mystery_man)
-mystery_man.attack(hippie)
-hippie.attack(mystery_man)
-mystery_man.attack(hippie)
+PencilBlade = Weapon(999, 7, "Pencil Blade", "A wooden practice blade with a carbon-reinforced core.")
+BottleRocket = Weapon(1, 24, "Bottle Rocket", "A powerful bottle rocket weapon. Can only be used once.")
+BalletShoes = Weapon(999, 7, "Ballet Shoes", "These used shoes make you feel incredibly dangerous.")
+OldTutu = Torso(999, 10, "Old Tutu", "Finally, a PROTECTIVE piece of armor.")
 
 # Option 1 - Define as we go
 StartRoom = Room("Starting Room", "You're suddenly in a strange forest, in the middle of an island. How'd you get "
@@ -308,7 +265,7 @@ western_path = Room("Western Path", "You can see a path to your west, a path sou
                                     "starting point.", None, None, StartRoom, None, None)
 ne_path = Room("Armory", "You find some abandoned armor here, along with a large number of steaks. Maybe someone was"
                          " here before you? There are also paths south and "
-                         "west.", None, eastern_path, None, northern_path, [Item])
+                         "west.", None, eastern_path, None, northern_path, PencilBlade)
 nw_path = Room("Northwest Path", "You can barely see anything except the paths to the south and "
                                  "east.", None, western_path, northern_path, None, None)
 se_path = Room("Southeast Path", "You can only see paths to the north and "
@@ -390,10 +347,9 @@ while playing:
     elif command.lower() in ['zork']:
         print("This isn't The Great Underground Empire.")
     elif command.lower() in ['take']:
-        if [] in Room:
-            Inventory += Item
-            print("You took the " + str(Item) + ".")
+        if player.current_location.items is not []:
+            print("You took the " + str(player.current_location.items) + ".")
         else:
-            print("There was nothing to take.")
+            print("But there was nothing to take.")
     else:
         print("I don't know that command.")
