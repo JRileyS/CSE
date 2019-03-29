@@ -1,3 +1,6 @@
+from typing import List, Any
+
+
 class Room(object):
     def __init__(self, name, description, north=None, south=None, east=None, west=None, items=None):
         if items is None:
@@ -10,9 +13,6 @@ class Room(object):
         self.west = west
         self.characters = []
         self.items = items
-
-
-Inventory = []
 
 
 class Item(object):
@@ -126,7 +126,7 @@ class PlanetBuster(Weapon):
 
 class IdArmor(Torso):
     def __init__(self):
-        super(IdArmor, self).__init__(32)
+        super(IdArmor, self).__init__(999, 32, "ID Armor", "An armor based on your Id.")
         self.uses = 999
         self.equipable = True
         self.defense = 32
@@ -136,7 +136,7 @@ class IdArmor(Torso):
 
 class MysteryCloak(Torso):
     def __init__(self):
-        super(MysteryCloak, self).__init__(6)
+        super(MysteryCloak, self).__init__(999, 6, "Mystery Man's Cloak", "It's a simple black cloak.")
         self.uses = 999
         self.name = "Mystery Man's Cloak"
         self.description = "The cloak of someone known only as the 'Mystery Man.' It looks like it's made out of " \
@@ -147,7 +147,8 @@ class MysteryCloak(Torso):
 
 class SpadeOutfit(Torso):
     def __init__(self):
-        super(SpadeOutfit, self).__init__(1)
+        super(SpadeOutfit, self).__init__(999, 1, "Ace of Spades Outfit", "Not to call a spade a spade, but this is "
+                                                                          "a spade.")
         self.uses = 999
         self.name = "Ace Outfit (Spade Variation)"
         self.description = "Not to call a spade a spade, but this is a spade."
@@ -348,7 +349,8 @@ while playing:
         print("This isn't The Great Underground Empire.")
     elif command.lower() in ['take']:
         if player.current_location.items is not []:
-            print("You took the " + str(player.current_location.items) + ".")
+            print("You took the " + str(player.current_location.items.name) + ".")
+            player.current_location.items += Inventory
         else:
             print("But there was nothing to take.")
     else:
