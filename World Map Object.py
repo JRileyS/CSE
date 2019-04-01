@@ -57,10 +57,13 @@ class Armor(Item):
 
 
 class Helmet(Armor):
-    def __init__(self, defense):
-        super(Helmet, self).__init__(True, 999, armor_amt)
+    def __init__(self, uses, defense, name, description):
+        super(Helmet, self).__init__(True, 999, armor_amt, )
+        self.uses = uses
+        self.equipable = True
         self.defense = defense
-        self.armor_amt = defense
+        self.name = name
+        self.description = description
 
 
 class Torso(Armor):
@@ -74,10 +77,13 @@ class Torso(Armor):
 
 
 class Boots(Armor):
-    def __init__(self, defense):
-        super(Boots, self).__init__(True, 999, armor_amt)
+    def __init__(self, uses, defense, name, description):
+        super(Boots, self).__init__(True, 999, armor_amt, )
+        self.uses = uses
+        self.equipable = True
         self.defense = defense
-        self.armor_amt = defense
+        self.name = name
+        self.description = description
 
 
 class Weapon(Item):
@@ -194,26 +200,6 @@ class SmokeBomb(Consumable):
         self.description = "A small smoke bomb. It'll make smoke appear wherever you use it."
 
 
-class WarHorn(Weapon):
-    def __init__(self):
-        super(WarHorn, self).__init__(999, 20)
-        self.equipable = True
-        self.uses = 999
-        self.attack = 20
-        self.name = "War Horn"
-        self.description = "You can blast away your opponents with these harsh sounds!"
-
-
-class WaterGun(Weapon):
-    def __init__(self):
-        super(WaterGun, self).__init__(999, 2)
-        self.equipable = True
-        self.uses = 999
-        self.attack = 2
-        self.name = "Water Gun"
-        self.description = "A small water gun. It's extremely effective against things made of fire, unsurprisingly."
-
-
 class Jevilstail(Boots):
     def __init__(self):
         super(Jevilstail, self).__init__(5)
@@ -251,6 +237,8 @@ class Player(object):
 PencilBlade = Weapon(999, 7, "Pencil Blade", "A wooden practice blade with a carbon-reinforced core.")
 BottleRocket = Weapon(1, 24, "Bottle Rocket", "A powerful bottle rocket weapon. Can only be used once.")
 BalletShoes = Weapon(999, 7, "Ballet Shoes", "These used shoes make you feel incredibly dangerous.")
+WaterGun = Weapon(999, 2, "Water Gun", "A small water gun that's unsurprisingly effective against fire.")
+WarHorn = Weapon(999, 20, "War Horn", "Blow away your foes with these harsh sounds!")
 OldTutu = Torso(999, 10, "Old Tutu", "Finally, a PROTECTIVE piece of armor.")
 
 # Option 1 - Define as we go
