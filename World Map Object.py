@@ -1,5 +1,7 @@
 from typing import List, Any
 
+Inventory: List[Any] = []
+
 
 class Room(object):
     def __init__(self, name, description, north=None, south=None, east=None, west=None, items=None):
@@ -97,114 +99,22 @@ class Weapon(Item):
 
 
 class Food(Item):
-    def __init__(self, taste, size):
+    def __init__(self, hp_heal, taste, size, name, description):
         super(Food, self).__init__("Food", 1, 1)
+        self.hp_heal = hp_heal
         self.taste = taste
         self.size = size
+        self.name = name
+        self.description = description
 
 
 class Consumable(Item):
-    def __init__(self, size, effect):
+    def __init__(self, size, effect, name, description):
         super(Consumable, self).__init__("Consumable", 1, 1)
         self.size = size
         self.effect = effect
-
-
-class BaseballCap(Helmet):
-    def __init__(self):
-        super(BaseballCap, self).__init__(3)
-        self.uses = 999
-        self.equipable = True
-        self.defense = 3
-        self.name = "Lucky Baseball Cap"
-        self.description = "A baseball cap that reminds you of a forgotten hero..."
-
-
-class PlanetBuster(Weapon):
-    def __init__(self):
-        super(PlanetBuster, self).__init__(999, 24, "The Planet Buster", "A powerful sword you are lucky to brandish.")
-        self.uses = 999
-        self.equipable = True
-        self.attack = 24
-        self.name = "The Planet Buster"
-        self.description = "A powerful sword you are lucky to brandish."
-
-
-class IdArmor(Torso):
-    def __init__(self):
-        super(IdArmor, self).__init__(999, 32, "ID Armor", "An armor based on your Id.")
-        self.uses = 999
-        self.equipable = True
-        self.defense = 32
-        self.name = "Armor of THE ID"
-        self.description = "An armor based on the representation of your Id. It's really slimy..."
-
-
-class MysteryCloak(Torso):
-    def __init__(self):
-        super(MysteryCloak, self).__init__(999, 6, "Mystery Man's Cloak", "It's a simple black cloak.")
-        self.uses = 999
-        self.name = "Mystery Man's Cloak"
-        self.description = "The cloak of someone known only as the 'Mystery Man.' It looks like it's made out of " \
-                           "vantablack, or something..."
-        self.equipable = True
-        self.defense = 6
-
-
-class SpadeOutfit(Torso):
-    def __init__(self):
-        super(SpadeOutfit, self).__init__(999, 1, "Ace of Spades Outfit", "Not to call a spade a spade, but this is "
-                                                                          "a spade.")
-        self.uses = 999
-        self.name = "Ace Outfit (Spade Variation)"
-        self.description = "Not to call a spade a spade, but this is a spade."
-        self.equipable = True
-        self.defense = 1
-
-
-class JammyDodger(Food):
-    def __init__(self):
-        super(JammyDodger, self).__init__("Sweet", "Small")
-        self.hp_heal = 2
-        self.name = "Jammy Dodger"
-        self.description = "A cookie with jam in the middle. Popular in Britain. Heals 2 HP."
-
-
-class Steak(Food):
-    def __init__(self):
-        super(Steak, self).__init__("Savory", "Big")
-        self.hp_heal = 15
-        self.name = "Steak"
-        self.description = "A large, medium-well steak. It's really salty. Heals 15 HP."
-
-
-class Grasshopper(Food):
-    def __init__(self):
-        super(Grasshopper, self).__init__("Savory", "Small")
-        self.hp_heal = 1
-        self.name = "Grasshopper"
-        self.description = "A chocolate-covered grasshopper. It's not too tasty, but it'll have to do."
-
-
-class Inhaler(Consumable):
-    def __init__(self):
-        super(Inhaler, self).__init__("Small", "Status Heal")
-        self.name = "Asthma Inhaler"
-        self.description = "An inhaler for asthma. If you have an asthma attack, it'll be pretty handy."
-
-
-class SmokeBomb(Consumable):
-    def __init__(self):
-        super(SmokeBomb, self).__init__("Small", "Battle Effect")
-        self.name = "Smoke Bomb"
-        self.description = "A small smoke bomb. It'll make smoke appear wherever you use it."
-
-
-class Jevilstail(Boots):
-    def __init__(self):
-        super(Jevilstail, self).__init__(5)
-        self.name = "Jevilstail"
-        self.description = "A J-shaped tail that gives you chaotic energy."
+        self.name = name
+        self.description = description
 
 
 class Player(object):
@@ -233,13 +143,25 @@ class Player(object):
         return getattr(self.current_location, direction)
 
 
-# Characters (Comment this out, this is for testing only)
+# Items, Weapons, and Armor
 PencilBlade = Weapon(999, 7, "Pencil Blade", "A wooden practice blade with a carbon-reinforced core.")
 BottleRocket = Weapon(1, 24, "Bottle Rocket", "A powerful bottle rocket weapon. Can only be used once.")
-BalletShoes = Weapon(999, 7, "Ballet Shoes", "These used shoes make you feel incredibly dangerous.")
+BalletShoes = Weapon(999, 10, "Ballet Shoes", "These used shoes make you feel incredibly dangerous.")
 WaterGun = Weapon(999, 2, "Water Gun", "A small water gun that's unsurprisingly effective against fire.")
 WarHorn = Weapon(999, 20, "War Horn", "Blow away your foes with these harsh sounds!")
 OldTutu = Torso(999, 10, "Old Tutu", "Finally, a PROTECTIVE piece of armor.")
+Jevilstail = Boots(999, 5, "Jevilstail", "A J-shaped tail that gives you chaotic energy.")
+BaseballCap = Helmet(999, 2, "Baseball Cap", "A baseball cap that belonged to a fallen hero...")
+SpadeOutfit = Torso(999, 1, "Ace Outfit", "Not to call a spade a spade, but this is a spade.")
+MysteryCloak = Torso(999, 6, "Mystery Man's Cloak", "A cloak belonging to the Mystery Man.")
+Inhaler = Consumable("Small", "Status Heal", "Asthma Inhaler", "An inhaler for asthma attacks.")
+SmokeBomb = Consumable("Small", "Battle Effect", "Smoke Bomb", "A small smoke bomb that makes smoke appear whenever "
+                                                               "you use it.")
+Steak = Food(15, "Salty", "Big", "Steak", "A medium-rare steak. It's pretty salty, but still tastes good. Heals 15 HP.")
+JammyDodger = Food(2, "Sweet", "Small", "Jammy Dodger", "A cookie with jam in it. Popular in Britain. Heals 2 HP.")
+Grasshopper = Food(1, "Savory", "Small", "Grasshopper", "A chocolate-covered grasshopper. Not too good, but it'll "
+                                                        "have to do. Heals 1 HP.")
+IdArmor = Torso(999, 32, "ID Armor", "An armor based on your Id. It's really slimy...")
 
 # Option 1 - Define as we go
 StartRoom = Room("Starting Room", "You're suddenly in a strange forest, in the middle of an island. How'd you get "
@@ -311,7 +233,10 @@ western_dog.west = www_path
 www_path.west = water
 water.west = win
 
+
 player = Player(StartRoom)
+print(player.current_location.items.name)
+print(player.current_location.items.description)
 playing = True
 directions = ['north', 'south', 'east', 'west', 'up', 'down']
 
