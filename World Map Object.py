@@ -235,8 +235,6 @@ water.west = win
 
 
 player = Player(StartRoom)
-print(player.current_location.items.name)
-print(player.current_location.items.description)
 playing = True
 directions = ['north', 'south', 'east', 'west', 'up', 'down']
 
@@ -263,8 +261,16 @@ while playing:
     elif command.lower() in ['take']:
         if player.current_location.items is not []:
             print("You took the " + str(player.current_location.items.name) + ".")
-            player.current_location.items += Inventory
+            Inventory += str(player.current_location.items.name)
         else:
             print("But there was nothing to take.")
+    elif command.lower() in ['pick up']:
+        if player.current_location.items is not []:
+            print("You picked up the " + str(player.current_location.items.name) + ".")
+            Inventory += str(player.current_location.items.name)
+        else:
+            print("But there was nothing to pick up.")
+    elif command.lower() in ['inventory']:
+        print(str(Inventory))
     else:
         print("I don't know that command.")
