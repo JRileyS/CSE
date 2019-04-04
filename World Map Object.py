@@ -271,6 +271,8 @@ while playing:
         else:
             print("But there was nothing to pick up.")
     elif command.lower() in ['inventory']:
+        for i in range(10):
+            print(i + 1)
         print(str(Inventory))
     else:
         print("I don't know that command.")
