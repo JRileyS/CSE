@@ -1,6 +1,7 @@
 from typing import List, Any
 
 Inventory: List[Any] = []
+whatever = []
 
 
 class Room(object):
@@ -271,7 +272,7 @@ while playing:
         else:
             print("But there was nothing to pick up.")
     elif command.lower() in ['inventory']:
-        for whatever in whatever:
+        for Inventory in range(player.current_location.items.name):
             print(str(Inventory))
     else:
         print("I don't know that command.")

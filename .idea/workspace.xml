@@ -12,7 +12,7 @@
     <SUITE FILE_PATH="coverage/CSE$Object_Notes.coverage" NAME="Object_Notes Coverage Results" MODIFIED="1551289438501" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/CSE$dictionary_map.coverage" NAME="dictionary_map Coverage Results" MODIFIED="1550077944201" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/CSE$World_Map_Object.coverage" NAME="World Map Object Coverage Results" MODIFIED="1554484194867" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/CSE$Gallery_Walk___Object_World_Map.coverage" NAME="Gallery Walk - Object World Map Coverage Results" MODIFIED="1554913545795" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/CSE$Gallery_Walk___Object_World_Map.coverage" NAME="Gallery Walk - Object World Map Coverage Results" MODIFIED="1555000782500" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/CSE$Inheritance.coverage" NAME="Inheritance Coverage Results" MODIFIED="1551465089450" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/CSE$Item.coverage" NAME="Item Coverage Results" MODIFIED="1552321098464" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/CSE$hangman.coverage" NAME="hangman Coverage Results" MODIFIED="1550770317586" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
@@ -49,7 +49,7 @@
           <entry key="project.open.time.38" value="1" />
           <entry key="project.open.time.39" value="1" />
           <entry key="project.open.time.40" value="1" />
-          <entry key="project.open.time.41" value="2" />
+          <entry key="project.open.time.41" value="3" />
           <entry key="project.open.time.42" value="1" />
           <entry key="project.open.time.43" value="3" />
           <entry key="project.open.time.48" value="1" />
@@ -64,7 +64,7 @@
           <entry key="project.open.time.75" value="1" />
           <entry key="project.open.time.8" value="1" />
           <entry key="project.open.time.83" value="1" />
-          <entry key="project.opened" value="40" />
+          <entry key="project.opened" value="41" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -79,12 +79,12 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="25583" />
+          <entry key="py" value="25672" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="25583" />
+          <entry key="Python" value="25672" />
         </counts>
       </usages-collector>
     </session>
@@ -94,8 +94,29 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Gallery Walk - Object World Map.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="240" column="14" lean-forward="true" selection-start-line="240" selection-start-column="14" selection-end-line="240" selection-end-column="14" />
+            <state relative-caret-position="239">
+              <caret line="265" column="13" lean-forward="true" selection-start-line="265" selection-start-column="13" selection-end-line="265" selection-end-column="13" />
+              <folding>
+                <element signature="e#5445#5576#0" />
+                <element signature="e#5871#6012#0" />
+                <element signature="e#6166#6331#0" />
+                <element signature="e#6371#6518#0" />
+                <element signature="e#6593#6752#0" />
+                <element signature="e#6825#6957#0" />
+                <element signature="e#7030#7162#0" />
+                <element signature="e#7224#7426#0" />
+                <element signature="e#7515#7620#0" />
+                <element signature="e#7702#7785#0" />
+                <element signature="e#7867#7975#0" />
+                <element signature="e#8064#8300#0" />
+                <element signature="e#8381#8542#0" />
+                <element signature="e#8641#8878#0" />
+                <element signature="e#8956#9227#0" />
+                <element signature="e#9304#9516#0" />
+                <element signature="e#9593#9721#0" />
+                <element signature="e#9797#9925#0" />
+                <element signature="e#10000#10121#0" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -124,6 +145,7 @@
         <option value="$PROJECT_DIR$/Item.py" />
         <option value="$PROJECT_DIR$/Jacob Stansell - Object World Map.py" />
         <option value="$PROJECT_DIR$/World Map Object.py" />
+        <option value="$PROJECT_DIR$/Gallery Walk - Object World Map.py" />
       </list>
     </option>
   </component>
@@ -143,20 +165,7 @@
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="CSE" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CSE" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope" />
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -429,8 +438,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Gallery Walk - Object World Map.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="240" column="14" lean-forward="true" selection-start-line="240" selection-start-column="14" selection-end-line="240" selection-end-column="14" />
+        <state relative-caret-position="239">
+          <caret line="265" column="13" lean-forward="true" selection-start-line="265" selection-start-column="13" selection-end-line="265" selection-end-column="13" />
+          <folding>
+            <element signature="e#5445#5576#0" />
+            <element signature="e#5871#6012#0" />
+            <element signature="e#6166#6331#0" />
+            <element signature="e#6371#6518#0" />
+            <element signature="e#6593#6752#0" />
+            <element signature="e#6825#6957#0" />
+            <element signature="e#7030#7162#0" />
+            <element signature="e#7224#7426#0" />
+            <element signature="e#7515#7620#0" />
+            <element signature="e#7702#7785#0" />
+            <element signature="e#7867#7975#0" />
+            <element signature="e#8064#8300#0" />
+            <element signature="e#8381#8542#0" />
+            <element signature="e#8641#8878#0" />
+            <element signature="e#8956#9227#0" />
+            <element signature="e#9304#9516#0" />
+            <element signature="e#9593#9721#0" />
+            <element signature="e#9797#9925#0" />
+            <element signature="e#10000#10121#0" />
+          </folding>
         </state>
       </provider>
     </entry>
