@@ -269,10 +269,11 @@ while playing:
         if player.current_location.items is not []:
             print("You picked up the " + str(player.current_location.items.name) + ".")
             Inventory += str(player.current_location.items.name)
+            player.current_location.items -= player.current_location.items
         else:
             print("But there was nothing to pick up.")
     elif command.lower() in ['inventory']:
-        for Inventory in range(player.current_location.items.name):
+        for Inventory in range(player.current_location.items):
             print(str(Inventory))
     else:
         print("I don't know that command.")
