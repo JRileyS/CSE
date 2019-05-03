@@ -273,7 +273,7 @@ while playing:
         else:
             print("But there was nothing to pick up.")
     elif command.lower() in ['inventory']:
-        for w in range(len(player.current_location.items.name)):
+        for w in range(len(str(Inventory))):
             print(w, len(str(Inventory)))
     else:
         print("I don't know that command.")
